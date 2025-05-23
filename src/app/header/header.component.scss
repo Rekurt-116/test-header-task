@@ -1,0 +1,80 @@
+.background {
+  display: flex;
+  padding: 0 12px;
+  height: 56px;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #1074CC;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  padding: 0 13px;
+}
+
+.search {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+  margin-left: 16px;
+  align-items: center;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+}
+
+.add {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+  margin-left: 16px;
+  align-items: center;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+}
+
+.avatar {
+  display: flex;
+  gap: 12px;
+}
+
+.notification {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+  align-items: center;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+}
+
+.ava {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  padding: 4px;
+  align-items: center;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+}
