@@ -1,3 +1,25 @@
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
 .search-background {
   display: flex;
   height: 48px;
@@ -7,12 +29,14 @@
   box-sizing: border-box;
   padding: 0 4px;
   align-items: center;
+  animation: slideInRight 0.3s ease-out forwards;
 }
 
 .search-input {
   width: 154px;
   height: 40px;
   border: none;
+  outline: none;
 }
 
 .search-button {
