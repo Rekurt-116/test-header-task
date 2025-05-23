@@ -1,0 +1,22 @@
+.search-background {
+  display: flex;
+  height: 48px;
+  width: 704px;
+  background: #FFFFFF;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 4px;
+  align-items: center;
+}
+
+.search-input {
+  width: 154px;
+  height: 40px;
+  border: none;
+}
+
+.search-button {
+  display: flex;
+  background: transparent;
+  border: none;
+}
