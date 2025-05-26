@@ -1,5 +1,5 @@
 * {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .background {
@@ -9,7 +9,7 @@
   width: 100%;
   align-items: center;
   box-sizing: border-box;
-  background-color: #1074CC;
+  background-color: #1074cc;
   justify-content: space-between;
 }
 
@@ -25,6 +25,20 @@
 }
 
 .nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  padding: 0 13px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.history {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -50,8 +64,6 @@ app-search {
   left: 182px;
   z-index: 1000;
   height: 48px;
-
-
 }
 
 .search {
@@ -76,6 +88,18 @@ app-search {
   box-sizing: border-box;
   background: transparent;
   border: none;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .avatar {
@@ -103,4 +127,79 @@ app-search {
   box-sizing: border-box;
   background: transparent;
   border: none;
+}
+
+/* Для мобильных экранов */
+@media (max-width: 768px) {
+  .search,
+  .ava {
+    display: none;
+  }
+
+  .header-left {
+    width: 100%;
+  }
+
+  .menu {
+    display: flex;
+    height: 24px;
+    width: 24px;
+    margin-right: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttons {
+    flex-direction: row-reverse;
+  }
+
+  .history {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    margin-left: 16px;
+    align-items: center;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+  }
+
+  .background {
+    padding: 0 8px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    background-color: #1074cc;
+    z-index: 10;
+    width: 35%;
+    height: 25%;
+    padding-top: 20px;
+    gap: 15px;
+    align-items: start;
+    border-radius: 0 0 10px 0;
+  }
+
+  .search {
+    display: flex;
+  }
+
+  app-search {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .nav {
+    font-size: 20px;
+    padding: 0 0;
+  }
 }

@@ -2,6 +2,15 @@
   <input (focus)="toggleFilter()" class="search-input" type="text" placeholder="Поисковый запрос" id="">
   <app-filter-search *ngIf="showFilter"></app-filter-search>
   <button class="search-button" (click)="close()">
-    <img src="/assets/Icon/search-black.svg" alt="">
+    <img
+    *ngIf="!isMobile"
+    src="/assets/Icon/search-black.svg"
+    alt="поиск"
+  />
+  <img
+    *ngIf="isMobile"
+    src="/assets/Icon/Vector.svg"
+    alt="поиск мобильный"
+  />
   </button>
 </div>

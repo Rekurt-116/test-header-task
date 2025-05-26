@@ -15,6 +15,7 @@ import { NgIf } from '@angular/common';
 })
 export class SearchComponent {
   showFilter = false;
+  isMobile = window.innerWidth <= 768;
 
   @Output()
   closeSearch = new EventEmitter<void>();

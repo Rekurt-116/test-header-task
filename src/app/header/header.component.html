@@ -1,49 +1,57 @@
 <header>
   <div class="background">
     <div class="header-left">
-      <img src="assets/logo.png" alt="logo"/>
-      <div class="navigation">
+      <button class="menu" *ngIf="isMobile" (click)="toggleMenu()">
+        <img src="/assets/Icon/icon.svg" alt="menu" />
+      </button>
+      <img src="assets/logo.png" alt="logo" />
+      <div
+        class="navigation"
+        [class.open]="isMenuOpen"
+        *ngIf="!isMobile || isMenuOpen"
+      >
         <div class="nav">
-          <img src="/assets/Icon/link.svg" alt="">
+          <img src="/assets/Icon/link.svg" alt="" />
           <a href="">Ссылки</a>
         </div>
         <div class="nav">
-          <img src="/assets/Icon/contacts.svg" alt="">
+          <img src="/assets/Icon/contacts.svg" alt="" />
           <a href="">Контакты</a>
         </div>
         <div class="nav">
-          <img src="/assets/Icon/tag.svg" alt="">
+          <img src="/assets/Icon/tag.svg" alt="" />
           <a href="">Теги</a>
         </div>
         <div class="nav">
-          <img src="/assets/Icon/favorites.svg" alt="">
+          <img src="/assets/Icon/favorites.svg" alt="" />
           <a href="">Избранное</a>
         </div>
         <div class="nav">
-          <img src="/assets/Icon/history.svg" alt="">
+          <img src="/assets/Icon/history.svg" alt="" />
           <a href="">Посещения</a>
         </div>
       </div>
-      <app-search
-        *ngIf="showSearch"
-        (closeSearch)="hideSearch()"
-      >
-      </app-search>
-      <button class="search" (click)="toggleSearch()">
-        <img src="/assets/Icon/search.svg" alt="">
+      <app-search *ngIf="showSearch" (closeSearch)="hideSearch()"> </app-search>
+      <div class="buttons">
+        <button class="search" (click)="toggleSearch()">
+        <img src="/assets/Icon/search.svg" alt="" />
+      </button>
+      <button class="history" *ngIf="isMobile">
+        <img src="/assets/Icon/history.svg" alt="" />
       </button>
       <button class="add">
-        <img src="/assets/Icon/add2.svg" alt="">
+        <img src="/assets/Icon/add2.svg" alt="" />
       </button>
+      </div>
+      
     </div>
     <div class="avatar">
       <button class="notification">
-        <img src="/assets/Icon/notifications.svg" alt="">
+        <img src="/assets/Icon/notifications.svg" alt="" />
       </button>
       <button class="ava">
-        <img src="/assets/Icon/AVA.svg" alt="">
+        <img src="/assets/Icon/AVA.svg" alt="" />
       </button>
     </div>
   </div>
 </header>
-
