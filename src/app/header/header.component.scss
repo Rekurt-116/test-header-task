@@ -1,3 +1,7 @@
+* {
+  color: #FFFFFF;
+}
+
 .background {
   display: flex;
   padding: 0 12px;
@@ -26,6 +30,28 @@
   gap: 8px;
   box-sizing: border-box;
   padding: 0 13px;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  width: 704px;
+  background-color: white;
+  border-radius: 4px;
+  margin-left: 10px; /* настрой под макет */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+app-search {
+  position: absolute;
+  top: 4px;
+  left: 182px;
+  z-index: 1000;
+  height: 48px;
+
+
 }
 
 .search {

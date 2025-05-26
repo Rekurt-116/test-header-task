@@ -1,0 +1,54 @@
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.search-background {
+  display: flex;
+  height: 48px;
+  width: 704px;
+  background: #FFFFFF;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 4px;
+  align-items: center;
+  animation: slideInRight 0.3s ease-out forwards;
+  border-radius: 4px;
+  position: relative;
+}
+
+.search-input {
+  width: 154px;
+  height: 40px;
+  border: none;
+  outline: none;
+}
+
+.search-button {
+  display: flex;
+  background: transparent;
+  border: none;
+}
+
+app-filter-search {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+}

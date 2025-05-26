@@ -24,7 +24,12 @@
           <a href="">Посещения</a>
         </div>
       </div>
-      <button class="search">
+      <app-search
+        *ngIf="showSearch"
+        (closeSearch)="hideSearch()"
+      >
+      </app-search>
+      <button class="search" (click)="toggleSearch()">
         <img src="/assets/Icon/search.svg" alt="">
       </button>
       <button class="add">
