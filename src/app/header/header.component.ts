@@ -8,7 +8,6 @@ import {FilterSearchComponent} from '../filter-search/filter-search.component';
   imports: [
     SearchComponent,
     NgIf,
-    FilterSearchComponent
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',

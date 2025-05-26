@@ -1,9 +1,14 @@
-import {Component, ElementRef, HostListener, Input, Output, EventEmitter} from '@angular/core';
+import {Component, HostListener, Output, EventEmitter} from '@angular/core';
+import { FilterSearchComponent } from '../filter-search/filter-search.component';
+import { NgIf } from '@angular/common';
 
 
 @Component({
   selector: 'app-search',
-  imports: [],
+  imports: [
+    FilterSearchComponent,
+    NgIf 
+  ],
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss',
   standalone: true,
@@ -24,5 +29,13 @@ export class SearchComponent {
 
   close() {
     this.closeSearch.emit();
+  }
+
+  public toggleFilter() {
+    this.showFilter = !this.showFilter;
+  }
+
+  public hideFilter() {
+    this.showFilter = false;
   }
 }
